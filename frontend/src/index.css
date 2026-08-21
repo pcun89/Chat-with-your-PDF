@@ -1,0 +1,28 @@
+/* -------------------------------------------------------------------------
+   Design tokens
+   Subject: a document-analysis tool. The motif is a physical reading
+   desk — paper, ruled lines, a highlighter pen marking evidence — paired
+   with the typed precision of the system doing the retrieving. Mono type
+   carries machine/metadata text (page refs, status, timestamps); the sans
+   carries everything a human actually reads.
+   ------------------------------------------------------------------------- */
+:root {
+    --ink: #14171f;
+    --ink-soft: #4b5160;
+    --paper: #eeece3;
+    --paper-raised: #f7f6f0;
+    --rule: #d6d2c4;
+    --rule-strong: #b9b4a1;
+    --accent: #2a4b7c;
+    --accent-soft: #c7d4e8;
+    --highlight: #ffd23f;
+    --highlight-soft: #fff1bf;
+    --error: #9c3b2e;
+    --error-soft: #f1d9d4;
+
+    --font-display: "IBM Plex Mono", ui-monospace, monospace;
+    --font-body: "IBM Plex Sans", system-ui, sans-serif;
+
+    --radius: 3px;
+    --shadow-card: 0 1px 0 var(--rule-strong), 0 8px 24px -16px rgba(20, 23, 31, 0.35);
+}
