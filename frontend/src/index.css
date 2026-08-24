@@ -64,3 +64,15 @@ body {
         transition-duration: 0.001ms !important;
     }
 }
+/* -------------------------------------------------------------------------
+   Shell
+   ------------------------------------------------------------------------- */
+.app {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-height: 100%;
+}
