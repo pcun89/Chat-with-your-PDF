@@ -145,3 +145,16 @@ body {
     padding: 12px 16px;
     border-bottom: 1px dashed var(--rule-strong);
 }
+/* -------------------------------------------------------------------------
+   Upload panel
+   ------------------------------------------------------------------------- */
+.dropzone {
+    margin: 16px;
+    border: 1.5px dashed var(--rule-strong);
+    border-radius: var(--radius);
+    padding: 28px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+    background: var(--paper);
+}
