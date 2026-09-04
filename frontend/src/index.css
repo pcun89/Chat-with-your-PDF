@@ -245,3 +245,117 @@ body {
     padding: 1px 4px;
     border-radius: 2px;
 }
+/* -------------------------------------------------------------------------
+   Chat panel
+   ------------------------------------------------------------------------- */
+.chat {
+    display: flex;
+    flex-direction: column;
+    min-height: 560px;
+}
+
+.chat__messages {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    max-height: 62vh;
+}
+
+.chat__empty {
+    margin: auto;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    max-width: 320px;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 78%;
+}
+
+.msg--user {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.msg--assistant {
+    align-self: flex-start;
+}
+
+.msg__bubble {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    line-height: 1.5;
+    font-size: 0.94rem;
+    white-space: pre-wrap;
+}
+
+.msg--user .msg__bubble {
+    background: var(--accent);
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.msg--assistant .msg__bubble {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-bottom-left-radius: 2px;
+}
+
+.msg--error .msg__bubble {
+    background: var(--error-soft);
+    border: 1px solid var(--error);
+    color: var(--error);
+}
+
+.sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.source-chip {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    background: var(--highlight-soft);
+    border: 1px solid var(--highlight);
+    border-radius: 2px;
+    padding: 3px 7px;
+    cursor: pointer;
+    color: var(--ink);
+    position: relative;
+}
+
+.source-chip:hover {
+    background: var(--highlight);
+}
+
+.source-chip__pop {
+    display: none;
+    position: absolute;
+    bottom: 130%;
+    left: 0;
+    width: 260px;
+    background: var(--ink);
+    color: var(--paper-raised);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    padding: 10px;
+    border-radius: var(--radius);
+    line-height: 1.4;
+    z-index: 5;
+    text-align: left;
+    white-space: normal;
+}
+
+.source-chip:hover .source-chip__pop,
+.source-chip:focus .source-chip__pop {
+    display: block;
+}
