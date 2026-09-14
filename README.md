@@ -26,3 +26,13 @@ Most "chat with your docs" demos wrap an API call and call it a day. This one is
 - 🚫 Explicit "not in this document" responses instead of hallucinated guesses
 - ⚡ Zero-infra by default (in-memory vector store); Cloud SQL + pgvector path included for production scale
 
+## Run it locally
+
+**Backend**
+```bash
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env        # add your GEMINI_API_KEY — free at aistudio.google.com/app/apikey
+uvicorn main:app --reload --port 8000
+```
