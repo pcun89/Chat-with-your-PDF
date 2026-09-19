@@ -36,3 +36,30 @@ pip install -r requirements.txt
 cp .env.example .env        # add your GEMINI_API_KEY — free at aistudio.google.com/app/apikey
 uvicorn main:app --reload --port 8000
 ```
+**Frontend**
+```bash
+cd frontend
+npm install
+cp .env.example .env        # VITE_API_URL=http://localhost:8000
+npm run dev
+```
+
+Open the printed `localhost:5173` URL, drop in a PDF, start asking questions.
+
+## Deploying
+
+**Backend → Cloud Run**
+```bash
+cd backend
+gcloud run deploy chat-with-pdf-backend \
+  --source . \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --set-env-vars GEMINI_API_KEY=YOUR_KEY,ALLOWED_ORIGINS=https://YOUR_GH_USERNAME.github.io
+```
+
+**Frontend → GitHub Pages**
+- Push to `main` with `.github/workflows/deploy-frontend.yml` in place
+- Set a repo secret `VITE_API_URL` to your Cloud Run URL
+- Enable Pages in repo settings (source: GitHub Actions)
+- Or deploy manually: `cd frontend && npm run build && npm run deploy`
