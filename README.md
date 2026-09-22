@@ -83,3 +83,22 @@ gcloud run deploy chat-with-pdf-backend \
 - **Auth / multi-tenancy** — out of scope for a demo; would add a user table and scope vector search by `(user_id, document_id)`
 - **Streaming responses** — answers return in one shot via `generate_content`; swapping to `generate_content_stream` + SSE is the clear next step for long answers
 - **OCR for scanned PDFs** — would need a Vision/OCR pass before chunking
+
+## Project structure
+
+chat-with-pdf/
+├── backend/
+│ ├── main.py # FastAPI routes
+│ ├── rag.py # chunking, embedding, retrieval, generation
+│ ├── pgvector_store.py # optional Cloud SQL + pgvector backend
+│ └── Dockerfile
+└── frontend/
+└── src/
+├── App.jsx
+├── api.js
+└── components/
+
+
+---
+
+Built with FastAPI, React, and the Gemini API.
