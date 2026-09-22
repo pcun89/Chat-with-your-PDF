@@ -86,17 +86,17 @@ gcloud run deploy chat-with-pdf-backend \
 
 ## Project structure
 
-**chat-with-pdf/
-**├── backend/
-**│ ├── main.py # FastAPI routes
-**│ ├── rag.py # chunking, embedding, retrieval, generation
-**│ ├── pgvector_store.py # optional Cloud SQL + pgvector backend
-**│ └── Dockerfile
-**└── frontend/
-**└── src/
-**├── App.jsx
-**├── api.js
-**└── components/
+##chat-with-pdf/
+##├── backend/
+##│ ├── main.py # FastAPI routes
+##│ ├── rag.py # chunking, embedding, retrieval, generation
+##│ ├── pgvector_store.py # optional Cloud SQL + pgvector backend
+##│ └── Dockerfile
+##└── frontend/
+##└── src/
+##├── App.jsx
+##├── api.js
+##└── components/
 
 
 ---
