@@ -1,4 +1,4 @@
-# 📄 Chat with your PDF
+# 📄 Chat with your PDF - Phillipp Cun
 
 **Ask questions about any PDF and get answers grounded in cited excerpts from the document — not the model's general knowledge.**
 
